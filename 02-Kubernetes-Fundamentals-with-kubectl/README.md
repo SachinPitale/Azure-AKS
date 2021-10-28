@@ -6,4 +6,3 @@
 | 01.   | Pods   |
 | 02.   | ReplicaSets  |
 | 03.   | Deployments  |
-| 04.   | Services  |

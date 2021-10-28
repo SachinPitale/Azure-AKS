@@ -1,20 +1,14 @@
 # Kubernetes - Deployment
 
-## Step-01: Introduction to Deployments
-- What is a Deployment?
-- What all we can do using Deployment?
-- Create a Deployment
-- Scale the Deployment
-- Expose the Deployment as a Service
 
-## Step-02: Create Deployment
+## Step-01: Create Deployment
 - Create Deployment to rollout a ReplicaSet
 - Verify Deployment, ReplicaSet & Pods
 - **Docker Image Location:** https://hub.docker.com/repository/docker/stacksimplify/kubenginx
 ```
 # Create Deployment
 kubectl create deployment <Deplyment-Name> --image=<Container-Image>
-kubectl create deployment my-first-deployment --image=stacksimplify/kubenginx:1.0.0 
+kubectl create deployment my-first-deployment --image=sachinpitale22/nginx:1.0
 
 # Verify Deployment
 kubectl get deployments

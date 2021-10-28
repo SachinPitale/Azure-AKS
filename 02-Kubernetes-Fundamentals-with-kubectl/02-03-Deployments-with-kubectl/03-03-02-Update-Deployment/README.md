@@ -1,9 +1,5 @@
 # Kubernetes - Update Deployments
 
-## Step-00: Introduction
-- We can update deployments using two options
-  - Set Image
-  - Edit Deployment
 
 ## Step-01: Updating Application version V1 to V2 using "Set Image" Option
 ### Update Deployment
@@ -15,7 +11,7 @@ kubectl get deployment my-first-deployment -o yaml
 
 # Update Deployment - SHOULD WORK NOW
 kubectl set image deployment/<Deployment-Name> <Container-Name>=<Container-Image> --record=true
-kubectl set image deployment/my-first-deployment kubenginx=stacksimplify/kubenginx:2.0.0 --record=true
+kubectl set image deployment/my-first-deployment nginx=sachinpitale22/nginx:2.0 --record=true
 ```
 ### Verify Rollout Status (Deployment Status)
 - **Observation:** By default, rollout happens in a rolling update model, so no downtime.
@@ -82,12 +78,12 @@ kubectl edit deployment/my-first-deployment --record=true
 # Change From 2.0.0
     spec:
       containers:
-      - image: stacksimplify/kubenginx:2.0.0
+      - image: sachinpitale22/nginx:2.0
 
 # Change To 3.0.0
     spec:
       containers:
-      - image: stacksimplify/kubenginx:3.0.0
+      - image: sachinpitale22/nginx:3.0
 ```
 
 ### Verify Rollout Status
