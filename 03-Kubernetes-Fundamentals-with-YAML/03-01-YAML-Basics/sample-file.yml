@@ -1,0 +1,34 @@
+# Simple Key value Pairs
+technology :
+  name: Kubernetes
+  Used: IT
+  Language: ymal 
+  Component: # List  
+    - Pod
+    - Replicaset
+  Cloud: [EKS, AKS]   # List with a differnt notation  
+  features: # 
+    - name: Deployment
+      description: Pod
+    - name: Service
+      description: Loadbalancer   
+--- # YAML Document Separator
+apiVersion: v1 # String
+kind: Pod  # String
+metadata: # Dictionary
+  name: myapp-pod
+  labels: # Dictionary 
+    app: myapp         
+spec:
+  containers: # List
+    - name: myapp
+      image: sachinpitale22/mynginx_image1:v1-release
+      ports:
+        - containerPort: 80
+          protocol: "TCP"
+        - containerPort: 81
+          protocol: "TCP"
+
+                     
+
+  
