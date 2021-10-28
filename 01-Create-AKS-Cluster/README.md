@@ -6,7 +6,7 @@
 - Create Kubernetes Cluster
 - **Basics**
   - **Subscription:** Free Trial
-  - **Resource Group:** Creat New: ask-rg
+  - **Resource Group:** Creat New: aks-rg
   - **Kubernetes Cluster Name:** akscluster
   - **Region:** (US) Central US
   - **Kubernetes Version:** Select what ever is latest stable version
@@ -37,7 +37,7 @@
 az aks get-credentials --resource-group <Resource-Group-Name> --name <Cluster-Name>
 
 # Replace Resource Group & Cluster Name
-az aks get-credentials --resource-group ask-rg --name akscluster
+az aks get-credentials --resource-group aks-rg --name akscluster
 
 # List Kubernetes Worker Nodes
 kubectl get nodes 
