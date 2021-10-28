@@ -1,38 +1,16 @@
 # Kubernetes - ReplicaSets
 
-## Step-01: Introduction to ReplicaSets
-- What are ReplicaSets?
-- What is the advantage of using ReplicaSets?
 
-## Step-02: Create ReplicaSet
+
+## Step-01: Create ReplicaSet
 
 ### Create ReplicaSet
 - Create ReplicaSet
 ```
 kubectl create -f replicaset-demo.yml
 ```
-- **replicaset-demo.yml**
-```yml
-apiVersion: apps/v1
-kind: ReplicaSet
-metadata:
-  name: my-helloworld-rs
-  labels:
-    app: my-helloworld
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: my-helloworld
-  template:
-    metadata:
-      labels:
-        app: my-helloworld
-    spec:
-      containers:
-      - name: my-helloworld-app
-        image: stacksimplify/kube-helloworld:1.0.0
-```
+
+
 
 ### List ReplicaSets
 - Get list of ReplicaSets

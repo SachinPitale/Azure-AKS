@@ -72,7 +72,7 @@ kubectl delete pod my-first-pod
 ```
 
 ## Step-02: Load Balancer Service Introduction
-![Alt text](arch/arch.PNG?raw=true "Demo")
+
 
 ## Step-04: Demo - Expose Pod with a Service
 - Expose pod with a service (Load Balancer Service) to access the application externally (from internet)
@@ -112,7 +112,7 @@ http://<External-IP-from-get-service-output>
 
 
 
-## Step-05: Interact with a Pod
+## Step-03: Interact with a Pod
 
 ### Verify Pod Logs
 ```
@@ -155,7 +155,7 @@ kubectl exec -it my-first-pod -- env
 kubectl exec -it my-first-pod -- ls
 kubectl exec -it my-first-pod -- cat /usr/share/nginx/html/index.html
 ```
-## Step-06: Get YAML Output of Pod & Service
+## Step-04: Get YAML Output of Pod & Service
 ### Get YAML Output
 ```
 # Get pod definition YAML output
