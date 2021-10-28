@@ -15,9 +15,9 @@ spec:
 - **Create Pod**
 ```
 # Create Pod
-kubectl create -f 02-pod-definition.yml
+kubectl create -f 01-pod-definition.yml
 [or]
-kubectl apply -f 02-pod-definition.yml
+kubectl apply -f 01-pod-definition.yml
 
 # List Pods
 kubectl get pods
@@ -27,7 +27,7 @@ kubectl get pods
 - **Create LoadBalancer Service for Pod**
 ```
 # Create Service
-kubectl apply -f 03-pod-LoadBalancer-service.yml
+kubectl apply -f 02-pod-LoadBalancer-service.yml
 
 # List Service
 kubectl get svc
