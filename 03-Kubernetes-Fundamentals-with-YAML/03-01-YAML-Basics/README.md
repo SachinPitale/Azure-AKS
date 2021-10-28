@@ -5,7 +5,7 @@
 ```yml
 # Defining simple key value pairs
 name: Kubernetes
-Language: ymal 
+Language: yaml 
 ```
 
 ## Step-02: Dictionary / Map
@@ -15,7 +15,7 @@ Language: ymal
 technology :
   name: Kubernetes
   Used: IT
-  Language: ymal 
+  Language: yaml 
 ```
 
 ## Step-03: Array / Lists
@@ -24,7 +24,7 @@ technology :
 technology :
   name: Kubernetes
   Used: IT
-  Language: ymal 
+  Language: yaml 
   Component: # List  
     - Pod
     - Replicaset
@@ -37,7 +37,7 @@ technology :
 technology :
   name: Kubernetes
   Used: IT
-  Language: ymal 
+  Language: yaml 
   Component: # List  
     - Pod
     - Replicaset
