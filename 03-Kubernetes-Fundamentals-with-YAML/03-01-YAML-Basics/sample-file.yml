@@ -2,7 +2,7 @@
 technology :
   name: Kubernetes
   Used: IT
-  Language: ymal 
+  Language: yaml 
   Component: # List  
     - Pod
     - Replicaset
