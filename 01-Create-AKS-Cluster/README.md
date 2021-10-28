@@ -30,7 +30,7 @@
   - Click on **Create**
 
 
-## Step-03: Cloud Shell - Configure kubectl to connect to AKS Cluster
+## Step-02: Cloud Shell - Configure kubectl to connect to AKS Cluster
 - Go to https://shell.azure.com
 ```
 # Template
@@ -44,7 +44,7 @@ kubectl get nodes
 kubectl get nodes -o wide
 ```
 
-## Step-04: Explore Cluster Control Plane and Workload inside that
+## Step-03: Explore Cluster Control Plane and Workload inside that
 ```
 # List Namespaces
 kubectl get namespaces
@@ -57,7 +57,7 @@ kubectl get pods --all-namespaces
 kubectl get all --all-namespaces
 ```
 
-## Step-05: Explore the AKS cluster on Azure Management Console
+## Step-04: Explore the AKS cluster on Azure Management Console
 - Explore the following features on high-level
 - **Overview**
   - Activity Log
@@ -83,7 +83,7 @@ kubectl get all --all-namespaces
 
 
 
-## Step-06: Local Desktop - Install Azure CLI and Azure AKS CLI
+## Step-05: Local Desktop - Install Azure CLI and Azure AKS CLI
 ```
 # Install Azure CLI (MAC)
 brew update && brew install azure-cli
