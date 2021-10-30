@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: azure-files-nginx-app
-          image: stacksimplify/kube-nginxapp1:1.0.0
+          image: sachinpitale22/mynginx_image1:v2-release
           imagePullPolicy: Always
           ports: 
             - containerPort: 80         
