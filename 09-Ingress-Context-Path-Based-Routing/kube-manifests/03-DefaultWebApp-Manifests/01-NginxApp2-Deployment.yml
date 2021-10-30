@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-nginx-deployment
+  labels:
+    app: app-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-nginx
+  template:
+    metadata:
+      labels:
+        app: app-nginx
+    spec:
+      containers:
+        - name: app-nginx
+          image: sachinpitale22/mynginx_image1:v1-release
+          ports:
+            - containerPort: 80
