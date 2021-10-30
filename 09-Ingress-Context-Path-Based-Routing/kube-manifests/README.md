@@ -39,11 +39,8 @@ http://<Public-IP-created-for-Ingress>/app1/index.html
 
 # Access App2
 http://<Public-IP-created-for-Ingress>/app2/index.html
-
-# Access Usermgmt Web App
+# Access Default App
 http://<Public-IP-created-for-Ingress>
-Username: admin101
-Password: password101
 
 ```
 
