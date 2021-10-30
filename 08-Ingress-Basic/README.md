@@ -30,13 +30,17 @@ az network public-ip create --resource-group MC_aks-rg_akscluster_eastus --name 
 - Make a note of Static IP which we will use in next step when installing Ingress Controller
 ```
 # Make a note of Public IP created for Ingress
-52.154.156.139
+168.61.37.27
 ```
 
 ## Step-03: Install Ingress Controller
 ```
 # Install Helm3 (if not installed)
-brew install helm
+curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
+sudo apt-get install apt-transport-https --yes
+echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+sudo apt-get update
+sudo apt-get install helm
 
 # Create a namespace for your ingress resources
 kubectl create namespace ingress-basic
@@ -65,7 +69,7 @@ helm install ingress-nginx ingress-nginx/ingress-nginx \
     --set controller.nodeSelector."beta\.kubernetes\.io/os"=linux \
     --set defaultBackend.nodeSelector."beta\.kubernetes\.io/os"=linux \
     --set controller.service.externalTrafficPolicy=Local \
-    --set controller.service.loadBalancerIP="52.154.156.139" 
+    --set controller.service.loadBalancerIP="168.61.37.27" 
 
 
 # List Services with labels
