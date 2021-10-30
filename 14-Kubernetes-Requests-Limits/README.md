@@ -52,7 +52,7 @@ kubectl get pods
 kubectl get svc
 
 # Access Application 
-http://<Public-IP-from-List-Services-Output>/app1/index.html
+http://<Public-IP-from-List-Services-Output>/app2/index.html
 ```
 ## Step-04: Clean-Up
 - Delete all k8s objects created as part of this section
