@@ -28,7 +28,7 @@
 - **Review + Create**  
 - It will take close to 15 minutes to create the database. 
 
-## Step-03: Update Security Settings for Database
+## Step-02: Update Security Settings for Database
 - Go to **Azure Database for MySQL Servers** -> **akswebappdb**
 - **Settings -> Connection Security**
   - **Very Important**: Enable **Allow Access to Azure Services**
@@ -45,7 +45,7 @@ mysql --host=mydemoserver.mysql.database.azure.com --user=myadmin@mydemoserver -
 mysql --host=akswebdb.mysql.database.azure.com --user=dbadmin@akswebdb -p
 ```
 
-## Step-04: Create Kubernetes externalName service Manifest and Deploy
+## Step-03: Create Kubernetes externalName service Manifest and Deploy
 - Create mysql externalName Service
 - **01-MySQL-externalName-Service.yml**
 ```yml
@@ -67,7 +67,7 @@ kubectl apply -f kube-manifests/01-MySQL-externalName-Service.yml
 kubectl run -it --rm --image=mysql:5.7.22 --restart=Never mysql-client -- mysql -h <AZURE-MYSQ-DB-HOSTNAME> -u <USER_NAME> -p<PASSWORD>
 
 # Replace Host Name of Azure MySQL Database and Username and Password
-kubectl run -it --rm --image=mysql:5.7.22 --restart=Never mysql-client -- mysql -h akswebappdb.mysql.database.azure.com -u dbadmin@akswebappdb -pRedhat1449
+kubectl run -it --rm --image=mysql:5.7.22 --restart=Never mysql-client -- mysql -h akswebdb.mysql.database.azure.com -u dbadmin@akswebdb -pRedhat1449
 
 mysql> show schemas;
 mysql> create database webappdb;
