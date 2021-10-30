@@ -1,7 +1,5 @@
 # Azure Files for AKS Storage
 
-## Step-01: Introduction
-- Understand Azure Files
 - We are going to write a Deployment Manifest for NGINX Application which will have its static content served from **Azure File Shares** in **app1** folder
 - We are going to mount the file share to a specific path `mountPath: "/usr/share/nginx/html/app1"` in the Nginx container
 
