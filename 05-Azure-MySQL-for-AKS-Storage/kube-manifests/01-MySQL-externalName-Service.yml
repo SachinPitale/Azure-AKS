@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+spec:
+  type: ExternalName
+  externalName: akswebdb.mysql.database.azure.com
+
+
+
+## External name service doesn't require any port, it will automatically identify port to access the application or database.
