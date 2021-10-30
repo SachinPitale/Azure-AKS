@@ -64,7 +64,7 @@ kubectl get all -n dev2
 kubectl get svc
 
 # Access Application
-http://<Public-IP-from-List-Services-Output>/app1/index.html
+http://<Public-IP-from-List-Services-Output>/app2/index.html
 ```
 
 ### Dev1 Namespace
@@ -73,7 +73,7 @@ http://<Public-IP-from-List-Services-Output>/app1/index.html
 kubectl get svc -n dev1
 
 # Access Application
-http://<Public-IP-from-List-Services-Output>/app1/index.html
+http://<Public-IP-from-List-Services-Output>/app2/index.html
 ```
 ### Dev2 Namespace
 ```
@@ -81,7 +81,7 @@ http://<Public-IP-from-List-Services-Output>/app1/index.html
 kubectl get svc -n dev2
 
 # Access Application
-http://<Public-IP-from-List-Services-Output>/app1/index.html
+http://<Public-IP-from-List-Services-Output>/app2/index.html
 ```
 ## Step-05: Clean-Up
 ```
