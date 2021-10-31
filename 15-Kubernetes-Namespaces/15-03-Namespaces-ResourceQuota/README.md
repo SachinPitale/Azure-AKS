@@ -60,7 +60,7 @@ kubectl describe quota ns-resource-quota -n dev3
 kubectl get svc -n dev3
 
 # Access Application
-http://<Public-IP-from-List-Services-Output>/app1/index.html
+http://<Public-IP-from-List-Services-Output>/app2/index.html
 
 ```
 ## Step-04: Clean-Up
