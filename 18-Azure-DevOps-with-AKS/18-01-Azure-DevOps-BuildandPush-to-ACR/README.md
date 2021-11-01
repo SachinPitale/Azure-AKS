@@ -14,7 +14,7 @@ description: Create Azure Pipeline to Build and Push Docker Image to Azure Conta
 
 ## Step-02: Create Github Project and Check-In Code
 ### Create Github Repo in Github
-- Name: azure-devops-github-acr-aks-app1
+- Name: azure-devops-acr-aks-app1
 - Description: Azure DevOps App1 Demo with AKS, Github and Azure Containter Registry
 - Repo Type: Public / Private (Your choice)
 - Click on **Create Repository**
@@ -27,13 +27,13 @@ mkdir azure-devops-aks-demo-repos
 cd azure-devops-aks-demo-repos
 
 # Create a Directory for Repo
-mkdir azure-devops-github-acr-aks-app1
-cd azure-devops-github-acr-aks-app1
+mkdir azure-devops-acr-aks-app1
+cd azure-devops-acr-aks-app1
 ```
 - Copy all files from `Giti-Repository-files` folder to our new repo folder `azure-devops-github-acr-aks-app1`
 ```
 # Initialize Git Repo
-cd azure-devops-github-acr-aks-app1
+cd azure-devops-acr-aks-app1
 git init
 
 # Do local Commit
@@ -42,13 +42,13 @@ git add .
 git commit -am "V1 Base Commit"
 
 # Link Github Remote Repository
-git remote add origin https://github.com/stacksimplify/azure-devops-github-acr-aks-app1.git
+git remote add origin https://github.com/SachinPitale/azure-devops-acr-aks-app1.git
 
 # Push to Remote Repository
 git push --set-upstream origin master
 
 # Go to Github Repo - Refresh and check files appeared in githbu repo
-https://github.com/stacksimplify/azure-devops-github-acr-aks-app1
+https://github.com/SachinPitale/azure-devops-acr-aks-app1
 ```
 
 ## Step-03: Review github checked-in files
@@ -59,9 +59,9 @@ https://github.com/stacksimplify/azure-devops-github-acr-aks-app1
 ## Step-04: Create Azure Container Registry ACR
 - Go to Services -> Container Registries
 - Click on **Add**
-- Subscription: StackSimplify-Paid-Subsciption
+- Subscription: Free
 - Resource Group: acr-rg1
-- Registry Name: aksdevopsacr   (NAME should be unique across Azure Cloud)
+- Registry Name: aksdockerdevops   (NAME should be unique across Azure Cloud)
 - Location: Central US
 - SKU: Basic  (Pricing Note: $0.167 per day)
 - Click on **Review + Create**
@@ -76,7 +76,7 @@ https://github.com/stacksimplify/azure-devops-github-acr-aks-app1
 
 
 ## Step-06 : Create DevOps Project
-- Project Name: azure-devops-github-acr-aks-app1
+- Project Name: azure-devops-acr-aks-app1
 - Project Description: AKS CICD Pipelines with Github and Azure Container Registry ACR
 - Visibility: Private
 - Advanced: Leave to defaults
@@ -87,13 +87,13 @@ https://github.com/stacksimplify/azure-devops-github-acr-aks-app1
 - Create Folder -> App1-Pipelines
 - Go to Pipelines -> Create New Pipeline
 - Where is your Code?: Github  
-- Select Repository: azure-devops-github-acr-aks-app1
+- Select Repository: azure-devops-acr-aks-app1
   - Provide Github Password
   - Click on **Approve and Install** for Repositories selected
 - Configure Your Pipeline: Docker (Build and Push Image to Azure Container Registry )
-- Select an Azure Subscription: stacksimplify-paid-subscription
+- Select an Azure Subscription: Free
 - Continue (Login as admin user)
-- Container Registry: aksdevopsacr
+- Container Registry: aksdockerdevops
 - Image Name: app1-nginx
 - Dockerfile: $(Build.SourcesDirectory)/Dockerfile
 - Click on **Validate and Configure**
@@ -178,19 +178,19 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '6a8843fd-7313-48e2-9381-3f9ef59ce82d' ## Review Service Connections
+  dockerRegistryServiceConnection: '164dzfce42-a591-4t5y-a858-bd5464daf83'
   imageRepository: 'app1/app1nginx'
-  containerRegistry: 'aksdevopsacr.azurecr.io'
+  containerRegistry: 'aksdockerdevops.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
-  
+
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
 stages:
 - stage: Build
   displayName: Build and push stage
-  jobs:  
+  jobs:
   - job: Build
     displayName: Build
     pool:
@@ -205,6 +205,7 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+
 ```
 
 ## References
