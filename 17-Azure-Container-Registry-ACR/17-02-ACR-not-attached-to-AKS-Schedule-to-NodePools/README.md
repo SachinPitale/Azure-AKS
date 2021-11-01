@@ -120,8 +120,8 @@ docker push $ACR_REGISTRY/$ACR_NAMESPACE/$ACR_IMAGE_NAME:$ACR_IMAGE_TAG
 # Modify for your environment.
 # ACR_NAME: The name of your Azure Container Registry
 # SERVICE_PRINCIPAL_NAME: Must be unique within your AD tenant
-ACR_NAME=acrdemo2ss
-SERVICE_PRINCIPAL_NAME=acr-sp-demo
+ACR_NAME=acrforaksdemo11
+SERVICE_PRINCIPAL_NAME=acr-service-principal
 
 # Obtain the full registry ID for subsequent command args
 ACR_REGISTRY_ID=$(az acr show --name $ACR_NAME --query id --output tsv)
@@ -149,8 +149,8 @@ echo "Service principal password: $SP_PASSWD"
 # ACR_NAME: The name of your Azure Container Registry
 # SERVICE_PRINCIPAL_NAME: Must be unique within your AD tenant
 #ACR_NAME=<container-registry-name>
-ACR_NAME=acrdemo2ss
-SERVICE_PRINCIPAL_NAME=acr-sp-demo
+ACR_NAME=acrforaksdemo11
+SERVICE_PRINCIPAL_NAME=acr-service-principal
 
 # Obtain the full registry ID for subsequent command args
 ACR_REGISTRY_ID=$(az acr show --name $ACR_NAME --query id --output tsv)
@@ -171,8 +171,8 @@ echo "Service principal password: $SP_PASSWD"
 ```
 ### Using Windows
 ```sh
-$ACR_NAME='aks2021'
-$SERVICE_PRINCIPAL_NAME='acr-sp-demo'
+$ACR_NAME='acrforaksdemo11'
+$SERVICE_PRINCIPAL_NAME='acr-service-principal'
 $ACR_REGISTRY_ID=$(az acr show --name $ACR_NAME --query id --output tsv)
  
 $SP_PASSWD=$(az ad sp create-for-rbac --name http://$SERVICE_PRINCIPAL_NAME --scopes $ACR_REGISTRY_ID --role acrpull --query password --output tsv)
@@ -189,11 +189,11 @@ kubectl create secret docker-registry <secret-name> \
     --docker-password=<service-principal-password>
 
 # Replace
-kubectl create secret docker-registry acrdemo2ss-secret \
+kubectl create secret docker-registry acrforaksdemo11s-secret \
     --namespace default \
-    --docker-server=acrdemo2ss.azurecr.io \
-    --docker-username=80beacfe-7176-4ff5-ad22-dbb15528a9a8 \
-    --docker-password=0zjUzGzSx3_.xi1SC40VcWkdVyl8Ml8QNj    
+    --docker-server=acrforaksdemo11.azurecr.io \
+    --docker-username=13705be8-b2ae-4f20-8d8b-ed814d104447 \
+    --docker-password=HE6J2pf.whNfaKyIpVA19-MZmwij9WGZXN    
 
 # List Secrets
 kubectl get secrets    
