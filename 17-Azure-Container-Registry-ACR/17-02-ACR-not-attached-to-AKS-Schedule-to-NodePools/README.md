@@ -211,7 +211,7 @@ kubectl get secrets
           ports:
             - containerPort: 80
       imagePullSecrets:
-        - name: acrdemo2ss-secret           
+        - name: acrforaksdemo11s-secret           
 ```
 
 ### Deploy to AKS and Test
