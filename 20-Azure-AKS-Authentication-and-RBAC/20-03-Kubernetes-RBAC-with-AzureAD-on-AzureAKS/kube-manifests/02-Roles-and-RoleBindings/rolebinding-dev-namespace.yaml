@@ -11,4 +11,4 @@ subjects:
 - kind: Group
   namespace: dev
   #name: groupObjectId # Your Azure AD Group Object ID: devaksteam
-  name: "4123d819-9ed6-460b-8321-39f02157536b"  
+  name: "3de09792-9593-43dc-bd35-4481f65655b8"  

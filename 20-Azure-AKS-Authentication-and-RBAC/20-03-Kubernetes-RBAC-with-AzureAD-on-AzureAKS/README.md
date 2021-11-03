@@ -68,7 +68,7 @@ az role assignment create \
 # Create Dev User
 DEV_AKS_USER_OBJECT_ID=$(az ad user create \
   --display-name "AKS Dev1" \
-  --user-principal-name aksdev1@stacksimplifygmail.onmicrosoft.com \
+  --user-principal-name aksdev1@sachinpitale22gmail.onmicrosoft.com \
   --password @AKSDemo123 \
   --query objectId -o tsv)
 echo $DEV_AKS_USER_OBJECT_ID  
@@ -79,7 +79,7 @@ az ad group member add --group devaksteam --member-id $DEV_AKS_USER_OBJECT_ID
 
 ## Step-04: Test Dev User Authentication to Portal
 - URL: https://portal.azure.com
-- Username: aksdev1@stacksimplifygmail.onmicrosoft.com
+- Username: aksdev1@sachin22ygmail.onmicrosoft.com
 - Password: @AKSDemo123
 
 
