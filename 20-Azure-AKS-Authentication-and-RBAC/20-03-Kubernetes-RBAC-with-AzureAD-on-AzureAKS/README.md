@@ -68,7 +68,7 @@ az role assignment create \
 # Create Dev User
 DEV_AKS_USER_OBJECT_ID=$(az ad user create \
   --display-name "AKS Dev1" \
-  --user-principal-name aksdev1@sachinpitale22gmail.onmicrosoft.com \
+  --user-principal-name aksdev1@sachin22gmail.onmicrosoft.com \
   --password @AKSDemo123 \
   --query objectId -o tsv)
 echo $DEV_AKS_USER_OBJECT_ID  
@@ -158,7 +158,7 @@ az aks get-credentials --resource-group aks-rg3 --name aksdemo3 --overwrite-exis
 kubectl get pods -n dev
 - URL: https://microsoft.com/devicelogin
 - Code: GLUQPEQ2N (Sample)(View on terminal)
-- Username: aksdev1@stacksimplifygmail.onmicrosoft.com
+- Username: aksdev1@sachin22gmail.onmicrosoft.com
 - Password: @AKSDemo123
 
 # List Services from Dev Namespace
@@ -168,12 +168,13 @@ kubectl get svc -n dev
 kubectl get svc -n qa
 
 # Forbidden Message should come when we list QA Namespace resources
-Error from server (Forbidden): services is forbidden: User "aksdev1@stacksimplifygmail.onmicrosoft.com" cannot list resource "services" in API group "" in the namespace "qa"
+Error from server (Forbidden): services is forbidden: User "aksdev1@sachin22gmail.onmicrosoft.com" cannot list resource "services" in API group "" in the namespace "qa"
 ```
 
 ## Step-08: Clean-Up
 ```
 # Clean-Up Apps
+az aks get-credentials --resource-group aks-rg3 --name aksdemo3 --admin
 kubectl delete ns dev
 kubectl delete ns qa
 ```
