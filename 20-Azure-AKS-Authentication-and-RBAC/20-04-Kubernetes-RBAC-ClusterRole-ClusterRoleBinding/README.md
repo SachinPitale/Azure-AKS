@@ -138,7 +138,7 @@ kubectl create namespace qa
 # Error Message
 Kalyans-Mac-mini:21-04-Kubernetes-RBAC-ClusterRole-ClusterRoleBinding kalyanreddy$ kubectl create namespace dev
 Error from server (Forbidden): namespaces is forbidden: User "aksread1@sachin22gmail.onmicrosoft.com" cannot create resource "namespaces" in API group "" at the cluster scope
-Kalyans-Mac-mini:21-04-Kubernetes-RBAC-ClusterRole-ClusterRoleBinding kalyanreddy$ 
+
 ```
 
 
