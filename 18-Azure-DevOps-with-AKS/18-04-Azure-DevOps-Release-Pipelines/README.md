@@ -179,7 +179,7 @@ http://<Public-IP-from-Get-Service-Output>
 Containers: aksdockerdevops.azurecr.io/custom2aksnginxapp1:$(Build.BuildId)
 
 # After
-Containers: aksdevopsacr.azurecr.io/custom2aksnginxapp1:$(Build.SourceVersion)
+Containers: aksdockerdevops.azurecr.io/custom2aksnginxapp1:$(Build.SourceVersion)
 ```
 - Click on **SAVE** to save release
 - Comment: Dev Container Tag changed from Build Id to Build Source Version
