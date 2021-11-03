@@ -96,7 +96,7 @@ description: Create Azure Pipeline to Build and Push Docker Image to Azure Conta
   - Username: Your Azure Administrator User
   - Password: Your Azure Administrator Password
 - Azure Container Registry: aksdevopsacr
-- Service Connection Name: manual-aksdevopsacr-svc
+- Service Connection Name: manual-aksdevopsdocker-svc
 - Service Connection Description: SVC for ACR named aksdevopsacr
 - Click on **Save**
 
@@ -143,7 +143,7 @@ stages:
     # Task-1: Build Docker Image and push to Azure Container Registry ACR
     - task: Docker@2
       inputs:
-        containerRegistry: 'manual-aksdevopsacr-svc'
+        containerRegistry: 'manual-aksdevopsdocker-svc'
         repository: 'custom2aksnginxapp1'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
