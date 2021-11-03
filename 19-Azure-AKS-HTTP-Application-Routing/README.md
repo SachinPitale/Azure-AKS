@@ -196,7 +196,7 @@ REFRESH to see DNS A and TXT records for app1 got deleted
 ```
 ## Step-09: Disable HTTP Application Routing Add On
 ### Disable using Azure Portal
-- Go to All Services -> Kubernetes Services -> aksdemo2 -> Settings -> Networking
+- Go to All Services -> Kubernetes Services -> akscluster -> Settings -> Networking
 - Enable HTTP application routing: Disable check box
 - Click on **SAVE**
 ```
@@ -207,7 +207,7 @@ kubectl get pod -n kube-system
 ### Disable using Azure CLI
 ```
 # Disable Add-On HTTP Application Routing to AKS cluster
-az aks disable-addons --addons http_application_routing --name aksdemo2 --resource-group aks-rg2 --no-wait
+az aks disable-addons --addons http_application_routing --name akscluster --resource-group aks-rg --no-wait
 
 # Verify Ingress related Pods and SVC related to HTTP Application Routing Add On will be deleted
 kubectl get svc -n kube-system
