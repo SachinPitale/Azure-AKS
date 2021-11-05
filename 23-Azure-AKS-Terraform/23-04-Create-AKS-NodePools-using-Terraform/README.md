@@ -121,7 +121,7 @@ kubectl get pods -o wide
 kubectl get svc
 
 # Access Webserver App (Running on System Nodepool)
-http://<public-ip-of-webserver-app>/app1/index.html
+http://<public-ip-of-webserver-app>/app2/index.html
 
 # Access Java-App (Running on linux101 nodepool)
 http://<public-ip-of-java-app>
