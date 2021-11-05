@@ -79,7 +79,7 @@ AKS_AD_AKSADMIN_GROUP_ID=$(az ad group create --display-name aksadmins --mail-ni
 echo $AKS_AD_AKSADMIN_GROUP_ID
 
 # Create Azure AD AKS Admin User 
-# Replace with your AD Domain - aksadmin1@stacksimplifygmail.onmicrosoft.com
+# Replace with your AD Domain - aksadmin1@sachin22gmail.onmicrosoft.com
 AKS_AD_AKSADMIN1_USER_OBJECT_ID=$(az ad user create \
   --display-name "AKS Admin1" \
   --user-principal-name aksadmin1@sachin22gmail.onmicrosoft.com \

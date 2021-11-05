@@ -62,7 +62,7 @@ kubectl get pod -o=custom-columns=NODE-NAME:.spec.nodeName,POD-NAME:.metadata.na
 kubectl get svc
 
 # Access Webserver App (Running on System Nodepool)
-http://<public-ip-of-webserver-app>/app1/index.html
+http://<public-ip-of-webserver-app>/app2/index.html
 
 # Access Java-App (Running on linux101 nodepool)
 http://<public-ip-of-java-app>
@@ -86,6 +86,6 @@ az group delete -n ${AKS_RESOURCE_GROUP}
 
 # Delete Users and Groups in AD
 Group: aksadmins
-User: aksadmin1@stacksimplifygmail.onmicrosoft.com
+User: aksadmin1@sachin22gmail.onmicrosoft.com
 ```
 
